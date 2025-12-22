@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import { RecipeContext } from "../../context/RecipeContext";
+import { useRecipeContext } from "../../hooks/useRecipeContext";
 
 function Recipes() {
-    const saman = useContext(RecipeContext);
+    // const saman = useContext(RecipeContext);
+    const saman = useRecipeContext();
   return (
     <div>
         {saman.list}

@@ -2,10 +2,12 @@ import React, { Fragment, useContext, useState } from "react";
 import "./Home.css";
 import useCounter from "../../hooks/useCounter";
 import { RecipeContext } from "../../context/RecipeContext";
+import { useRecipeContext } from "../../hooks/useRecipeContext";
 
 function Home() {
-  const things = useContext(RecipeContext);
-  const { list, printGlobal } = things; 
+  // const things = useContext(RecipeContext);
+  const things = useRecipeContext();
+  const { list, printGlobal } = things;
   const updateList = () => {
     things.setList([2, 3]);
   };
